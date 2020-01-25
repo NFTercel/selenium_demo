@@ -9,7 +9,7 @@ class ReadIni(object):
         if file == None:
             file = os.path.abspath('./local_element.ini')
         if node == None:
-            self.node = "ReginsterElement"
+            self.node = "LoginElement"
         else:
             self.node = node
 
@@ -28,7 +28,9 @@ class ReadIni(object):
 
     # #获取数据
     def get_value(self,key):
+        print('node: ',self.node,'key: ',key)
         data = self.cf.get(self.node,key)
+        print("data: ",data)
         return data
 
 

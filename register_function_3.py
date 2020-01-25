@@ -4,8 +4,7 @@ import time
 import random
 import string
 from PIL import Image
-import pytesseract
-from find_element import Find_Element
+from common.find_element import Find_Element
 class RegisterFunction(object):
     '''将获取控件的方法封装到find_element.py中'''
 
@@ -67,15 +66,18 @@ class RegisterFunction(object):
 
     def main(self):
         self.send_element('user_name','selenium_training')
-        self.send_element('passwd','test123456')
+        self.send_element('passwd','test1234569')
         self.get_user_element('user_private').click()
         self.get_user_element('submit').click()
+        time.sleep(5)
+        str = self.get_user_element('pwandname_err_mess').text
+        print('text: ',str)
         time.sleep(2)
         self.driver.close()
         self.driver.quit()
 
 
 if __name__ == '__main__':
-    for i in range(3):
+    for i in range(1):
         register_function = RegisterFunction('https://gitee.com/login',i)
         register_function.main()
