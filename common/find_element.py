@@ -16,6 +16,7 @@ class Find_Element():
         data = data.split(">",1)
         by = data[0]
         value = data[1]
+        print('by: ',by,'value: ',value)
         try:
             if by == 'id':
                 return self.driver.find_element_by_id(value)

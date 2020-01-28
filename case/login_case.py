@@ -18,13 +18,13 @@ class LoginCase(object):
         if result == True:
             print('用例执行成功，登录失败')
 
-    def login_name_err(self):
+    def test_login_name_err(self):
         result = self.login_b.login_name_error('1234','1234567')
         if result == True:
             print('用例执行成功，登录失败')
 
 
-    def login_password_err(self):
+    def test_login_password_err(self):
         result = self.login_b.login_name_error('selenium_training','123')
         print('***********login_password************')
         if result == True:

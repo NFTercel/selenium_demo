@@ -35,6 +35,6 @@ class ReadIni(object):
 
 
 
-if __name__ == '__main__':
-    read_init = ReadIni()
-    print(read_init.get_value("user_name"))
+# if __name__ == '__main__':
+#     read_init = ReadIni()
+#     print(read_init.get_value("user_name"))
