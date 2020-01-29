@@ -30,9 +30,10 @@ class LoginHandle(object):
     #     self.login_p.get_empty_message().text
     '''获取错误信息'''
     def get_error_message(self,info,message):
-        if info == 'name_error' or info == 'pw_error':
+        # if info == 'name_error' or info == 'pw_error':
+        if info == 'pwandname_err_mess':
             text = self.login_p.get_err_message().text
-        elif info == 'empty':
+        elif info == 'pwname_empty':
             text = self.login_p.get_empty_message().text
         return text
 

@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>This is the Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-01-29 00:06:37</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.000259</p>
-<p class='attribute'><strong>Status:</strong> Pass 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-01-29 16:04:07</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:18.966895</p>
+<p class='attribute'><strong>Status:</strong> Failure 3</p>
 
 <p class='description'>测试报告</p>
 </div>
@@ -221,31 +221,43 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
-    <td>test_login_unitest.FirstCase: 每条case前执行</td>
-    <td>1</td>
-    <td>1</td>
+<tr class='failClass'>
+    <td>test_login_unitest_ddt.LoginCase</td>
+    <td>3</td>
     <td>0</td>
+    <td>3</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>testfirst002</div></td>
+<tr id='ft1.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_emp_1___liliang____dfghjk____name_error____用户名为必填项__</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        fail</a>
 
-    <div id='div_pt1.1' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1: 
+ft1.1: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/liliang/PycharmProjects/selenium-train/case/test_login_unitest_ddt.py", line 106, in test_login_emp
+    self.assertFalse(result)
+AssertionError: True is not false
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/liliang/PycharmProjects/selenium-train/case/test_login_unitest_ddt.py", line 106, in test_login_emp
+    self.assertFalse(result)
+AssertionError: True is not false
+
 
         </pre>
     </div>
@@ -254,31 +266,70 @@ pt1.1:
     </td>
 </tr>
 
-<tr class='passClass'>
-    <td>test_login_unitest_02.FirstCase: 每条case前执行</td>
-    <td>1</td>
-    <td>1</td>
-    <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
-</tr>
-
-<tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>testfirst004</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_emp_2___liliang____dfghjk____name_error____用户名为必填项__</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        fail</a>
 
-    <div id='div_pt2.1' class="popup_window">
+    <div id='div_ft1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt2.1: 
+ft1.2: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/liliang/PycharmProjects/selenium-train/case/test_login_unitest_ddt.py", line 106, in test_login_emp
+    self.assertFalse(result)
+AssertionError: True is not false
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/liliang/PycharmProjects/selenium-train/case/test_login_unitest_ddt.py", line 106, in test_login_emp
+    self.assertFalse(result)
+AssertionError: True is not false
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_login_emp_3___liliang____dfghjk____name_error____用户名为必填项__</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        fail</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/liliang/PycharmProjects/selenium-train/case/test_login_unitest_ddt.py", line 106, in test_login_emp
+    self.assertFalse(result)
+AssertionError: True is not false
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/liliang/PycharmProjects/selenium-train/case/test_login_unitest_ddt.py", line 106, in test_login_emp
+    self.assertFalse(result)
+AssertionError: True is not false
+
 
         </pre>
     </div>
@@ -289,9 +340,9 @@ pt2.1:
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>2</td>
-    <td>2</td>
+    <td>3</td>
     <td>0</td>
+    <td>3</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

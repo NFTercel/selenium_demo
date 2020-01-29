@@ -8,3 +8,5 @@ configparser
 Pillow
 pytesseract
 configparser
+ddt
+xlrd

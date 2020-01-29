@@ -24,8 +24,10 @@ class RunCase(unittest.TestCase):
         file = open(report_file, 'wb')
         case_path = os.path.join(os.getcwd(), 'case')
         print('case_path: ', case_path)
-        suite = unittest.defaultTestLoader.discover(case_path, 'test_*')
-        # unittest.TextTestRunner().run(suite)
+        # unittest.TextTestRunner().run(suite) #直接执行测试
+        # suite = unittest.defaultTestLoader.discover(case_path, 'test_*')  #执行所有已test开头的文件
+        suite = unittest.defaultTestLoader.discover(case_path, 'test_login_unitest_ddt.py') #执行指定测试类
+
 
         runner = HTMLTestRunner.HTMLTestRunner(stream=file, title='This is the Report',
                                                description=u'测试报告', verbosity=2)

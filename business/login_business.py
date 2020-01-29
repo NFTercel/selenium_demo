@@ -47,3 +47,13 @@ class LoginBusiness:
         self.base_action(username, password)
 
 
+    #ddt方法
+    def login_function(self,username,password,assertkey,asserttext):
+        self.base_action(username, password)
+        # if self.login_h.get_error_message('name_error','用户名为必填项'):
+        if self.login_h.get_error_message(assertkey,asserttext):
+            # print('验证：用户名、密码为必填项')
+            return True
+        else:
+            return False
+
