@@ -11,6 +11,7 @@ import unittest
 from report.tools import HTMLTestRunner
 import ddt
 from util.excel_util import ExcelUtil
+from util.get_logs import log
 
 ex = ExcelUtil()
 data = ex.get_data()
@@ -79,9 +80,15 @@ data = ex.get_data()
 @ddt.ddt
 class LoginCase(unittest.TestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        cls.logger = log()
+        cls.log_config = cls.logger.get_log()
+
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.get('https://gitee.com/login')
+        self.log_config.debug('创建driver')
         self.login_b = LoginBusiness(self.driver)
 
     def tearDown(self):
@@ -95,6 +102,11 @@ class LoginCase(unittest.TestCase):
                 print('img_name: ',img_name)
                 self.driver.get_screenshot_as_file(img_name)
         self.driver.close()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.logger.close_handle()
+
 
 
     # @ddt.data(

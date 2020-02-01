@@ -1,0 +1,8 @@
+2020-02-02 00:32:23,823 remote_connection.py--> _request 10: DEBUG--> POST http://127.0.0.1:51656/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"extensions": [], "args": []}}}
+2020-02-02 00:32:23,824 connectionpool.py--> _new_conn 10: DEBUG--> Starting new HTTP connection (1): 127.0.0.1:51656
+2020-02-02 00:32:24,606 connectionpool.py--> _make_request 10: DEBUG--> http://127.0.0.1:51656 "POST /session HTTP/1.1" 200 689
+2020-02-02 00:32:24,607 remote_connection.py--> _request 10: DEBUG--> Finished Request
+2020-02-02 00:32:24,607 remote_connection.py--> _request 10: DEBUG--> POST http://127.0.0.1:51656/session/4745170d44e54f8572ab397d0f877f6a/url {"url": "https://gitee.com/login"}
+2020-02-02 00:32:28,544 connectionpool.py--> _make_request 10: DEBUG--> http://127.0.0.1:51656 "POST /session/4745170d44e54f8572ab397d0f877f6a/url HTTP/1.1" 200 14
+2020-02-02 00:32:28,545 remote_connection.py--> _request 10: DEBUG--> Finished Request
+2020-02-02 00:32:28,545 test_login_unitest_ddt.py--> setUp 10: DEBUG--> 创建driver
